@@ -13,13 +13,13 @@ import Button from "../Button";
 import ClientOnly from "../ClientOnly";
 
 interface ListingCardProps {
+  currentUser?: SafeUser | null;
   data: SafeListing;
   reservation?: SafeReservation;
   onAction?: (id: string) => void;
   disabled?: boolean;
   actionLabel?: string;
   actionId?: string;
-  currentUser?: SafeUser | null;
 }
 
 const ListingCard: React.FC<ListingCardProps> = ({

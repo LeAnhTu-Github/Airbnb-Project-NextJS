@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 import Container from "@/app/components/Container";
 import ListingCard from "@/app/components/listings/ListingCard";
-import EmptyState from "./components/EmptyState";
+import EmptyState from "@/app/components/EmptyState";
 
 import getListings, { IListingsParams } from "@/app/actions/getListings";
 import getCurrentUser from "@/app/actions/getCurrentUser";
@@ -39,7 +39,7 @@ const Home = async ({ searchParams }: HomeProps) => {
             gap-8
           "
         >
-          {listings.map((listing) => (
+          {listings.map((listing: any) => (
             <ListingCard
               currentUser={currentUser}
               key={listing.id}
